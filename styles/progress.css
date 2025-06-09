@@ -165,7 +165,7 @@
   }
   .progress__bar-label--left,
   .progress__bar-label--right {
-    font-size: 0.85rem;
+    font-size: 1.25rem;
   }
   .progress__bar-wrapper {
     padding: 4px 1vw;

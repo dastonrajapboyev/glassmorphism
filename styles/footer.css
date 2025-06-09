@@ -97,6 +97,11 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1200px) {
+  .footer__container {
+    gap: 24px;
+  }
+}
 @media (max-width: 900px) {
   .footer__container {
     flex-direction: column;
@@ -128,6 +133,7 @@
     padding: 0 2vw;
     gap: 12px;
   }
+
   .footer__logo {
     width: 32px;
     height: 32px;

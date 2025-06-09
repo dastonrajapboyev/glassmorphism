@@ -152,7 +152,11 @@
   }
   .about__stat-icons {
     gap: 16px;
-    margin-left: 0;
+    /* margin-left: 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .about__stat-icon {
     width: 120px;
@@ -173,17 +177,6 @@
   .about__stat-label,
   .about__stat-icons {
     margin-left: 12px;
-  }
-  .about__stat-icons {
-    gap: 8px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin-left: 0;
-  }
-  .about__stat-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
   }
 }
 
