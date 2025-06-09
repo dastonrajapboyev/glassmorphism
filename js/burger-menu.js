@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".header__burger");
   const nav = document.querySelector(".header__nav");
   const body = document.body;
+  const navLinks = document.querySelectorAll(".header__nav-link");
+
+  // Set active link based on current page
+  const currentPath = window.location.pathname;
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
 
   burger.addEventListener("click", () => {
     burger.classList.toggle("active");
@@ -9,10 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
   });
 
-  // Close menu when clicking on a link
-  const navLinks = document.querySelectorAll(".header__nav-link");
+  // Handle link clicks
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
+      // Remove active class from all links
+      navLinks.forEach((l) => l.classList.remove("active"));
+      // Add active class to clicked link
+      link.classList.add("active");
+
+      // Close mobile menu
       burger.classList.remove("active");
       nav.classList.remove("active");
       body.style.overflow = "";

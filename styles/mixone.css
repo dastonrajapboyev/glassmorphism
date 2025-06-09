@@ -1,0 +1,312 @@
+/* mixone.css */
+.mixone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 178px 0 216px 0;
+}
+
+.mixone__container {
+  width: 100%;
+  max-width: 1433px;
+  background: rgba(24, 24, 40, 0.5);
+  border-radius: 32px;
+  border: 1.5px solid rgba(162, 89, 255, 0.12);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.12);
+  /* padding: 48px 48px 40px 48px;
+  margin: 0 16px; */
+}
+
+.mixone__content {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 48px;
+  padding: 50px 0px 0 51px;
+}
+
+.mixone__info {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 600px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mixone__logo-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.mixone__title {
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 113px;
+  letter-spacing: 4%;
+}
+
+.mixone__logo {
+  width: 216px;
+  height: 130px;
+}
+
+.mixone__desc {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 4%;
+  margin-top: 38px;
+}
+
+.mixone__tasks {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.mixone__services {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.mixone__images {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  position: relative;
+}
+.mixone__images img {
+  object-fit: cover;
+}
+
+.mixone__phone {
+  height: 400px;
+  width: auto;
+  border-radius: 32px;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18);
+  background: #181828;
+}
+
+.mixone__phone--left {
+  width: 261px;
+  height: 538px;
+  z-index: 1;
+  position: relative;
+  left: 0;
+}
+
+.mixone__phone--right {
+  width: 284px;
+  height: 594px;
+  z-index: 2;
+  position: relative;
+  left: -80px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 1100px) {
+  .mixone__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .mixone__images {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .mixone {
+    margin: 108px 0 116px 0;
+  }
+  .mixone__container {
+    padding: 18px 10vw 18px 10vw;
+  }
+  .mixone__title {
+    font-size: 2rem;
+  }
+  .mixone__phone {
+    height: 220px;
+    border-radius: 16px;
+  }
+}
+
+.mixone__cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 178px 0 0 0;
+}
+
+.mixone__cta-text {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 4%;
+}
+
+.mixone__cta-accent {
+  /* color: #ff2e63; */
+}
+
+.mixone__cta-link {
+  color: #6c63ff;
+  font-weight: 800;
+}
+
+.mixone__cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 24px;
+  /* background: linear-gradient(135deg, #a259ff 0%, #ff2e63 100%); */
+  box-shadow: 0 4px 32px 0 rgba(162, 89, 255, 0.18);
+  margin-left: 16px;
+  transition: transform 0.15s;
+  text-decoration: none;
+  padding: 47px 67px 45px 67px;
+}
+
+.mixone__cta-btn:hover {
+  transform: scale(1.08);
+}
+
+.mixone__cta-arrow {
+  font-size: 48px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .mixone__cta-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .mixone__cta-text {
+    font-size: 20px;
+  }
+  .mixone__cta-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+  .mixone__cta-arrow {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mixone__container {
+    padding: 8px 10vw 8px 10vw;
+    max-width: 100vw;
+    border-radius: 16px;
+  }
+  .mixone__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+  }
+  .mixone__info {
+    max-width: 100vw;
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .mixone__logo-row {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .mixone__title {
+    font-size: 1.3rem;
+    line-height: 1.1;
+  }
+  .mixone__logo {
+    width: 80px;
+    height: auto;
+  }
+  .mixone__desc,
+  .mixone__tasks,
+  .mixone__services {
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+  .mixone__images {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .mixone__phone {
+    /* height: 120px; */
+    width: auto;
+    border-radius: 10px;
+  }
+  .mixone__phone--left,
+  .mixone__phone--right {
+    left: 0;
+    margin: 0;
+    /* width: 90px;
+    height: 120px; */
+  }
+  .mixone__cta-row {
+    flex-direction: column;
+    gap: 10px;
+    margin: 18px 0 0 0;
+  }
+  .mixone__cta-text {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .mixone__cta-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    padding: 0;
+    margin-left: 0;
+  }
+  .mixone__cta-btn img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mixone {
+    padding: 0 10px;
+    margin: 78px 0 76px 0;
+  }
+  .mixone__container {
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .mixone__title {
+    font-size: 1rem;
+  }
+  .mixone__cta-text {
+    font-size: 0.85rem;
+  }
+  .mixone__phone {
+    /* height: 80px;
+    width: 60px; */
+    border-radius: 6px;
+  }
+  .mixone__phone--left,
+  .mixone__phone--right {
+    /* width: 100px;
+    height: 160px; */
+  }
+}

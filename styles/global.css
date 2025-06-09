@@ -3,11 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
   font-family: "Montserrat", Arial, sans-serif;
-  background: linear-gradient(135deg, #181828 0%, #3a0ca3 100%);
+  /* background: linear-gradient(135deg, #181828 0%, #3a0ca3 100%); */
+  background: linear-gradient(90deg, #23183b, #6e2bb2, #5514ae);
   color: #fff;
   min-height: 100vh;
 }
