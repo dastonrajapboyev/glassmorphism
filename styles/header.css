@@ -163,8 +163,8 @@ li {
 
   .header__nav .header__icons {
     gap: 25px;
-    margin-top: 300px;
-    padding-bottom: 40px;
+    margin-top: auto;
+    padding-bottom: 60px;
   }
 
   .header__nav .header__icon {
