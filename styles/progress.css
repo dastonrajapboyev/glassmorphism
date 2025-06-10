@@ -7,15 +7,33 @@
 }
 
 .progress__container {
+  position: relative;
   width: 100%;
   max-width: 1222px;
   background: rgba(24, 24, 40, 0.5);
   border-radius: 32px;
-  border: 1.5px solid rgba(162, 89, 255, 0.12);
+  /* border: 1.5px solid rgba(162, 89, 255, 0.12); - olib tashlandi */
   box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.12);
   padding: 80px 58px 108px 58px;
   text-align: center;
   margin: 0 16px;
+}
+
+.progress__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px; /* border qalinligi */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 169, 169, 0.25) 0%,
+    /* yuqorida yorqin */ rgba(255, 255, 255, 0) 100% /* pastda shaffof */
+  );
+  border-radius: 32px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
 }
 
 .progress__desc {
@@ -121,7 +139,7 @@
   .progress__container {
     padding: 12px 2vw 18px 2vw;
     max-width: 100vw;
-    border-radius: 16px;
+    /* border-radius: 16px; */
   }
   .progress__desc {
     font-size: 1.1rem;
@@ -157,7 +175,7 @@
 @media (max-width: 500px) {
   .progress__container {
     padding: 20px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
   .progress__desc {
     font-size: 0.95rem;

@@ -8,7 +8,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 44px 0 24px 0;
+  padding: 44px 20px 24px 20px;
   max-width: 1435px;
   margin: 0 auto;
 }
@@ -18,7 +18,8 @@ li {
   align-items: center;
   gap: 38px;
 }
-
+.header__container {
+}
 .header__logo {
   width: 48px;
   height: 48px;
@@ -38,6 +39,7 @@ li {
 }
 
 .header__nav-link {
+  position: relative;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -46,6 +48,23 @@ li {
   border-radius: 14px;
   backdrop-filter: blur(4px);
   background: rgba(0, 0, 0, 0.2);
+}
+
+.header__nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border qalinligi */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 169, 169, 0.25) 0%,
+    /* yuqorida yorqin */ rgba(255, 255, 255, 0) 100% /* pastda shaffof */
+  );
+  border-radius: 14px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
 }
 
 .header__nav-link--active,
