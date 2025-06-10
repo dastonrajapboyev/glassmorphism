@@ -69,7 +69,8 @@ li {
 
 .header__nav-link--active,
 .header__nav-link:hover,
-.header__nav-link.active {
+.header__nav-link.active,
+.header__nav-link.active-link {
   color: #ff2e63;
 }
 

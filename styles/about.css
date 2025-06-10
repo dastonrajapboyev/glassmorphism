@@ -53,7 +53,8 @@
   letter-spacing: 4%;
 }
 
-.about__title-accent {
+.about__title-accent,
+.about__desc span {
   color: #ff2e63;
 }
 
@@ -392,4 +393,17 @@
     aspect-ratio: 1/1;
     /* border-radius: 4px;   */
   }
+}
+
+/* About page specific styles */
+.about-page {
+  padding: 0 20px;
+}
+.about-page .about__top {
+  max-width: 1435px;
+}
+
+/* Keep original width for index page */
+.about:not(.about-page) .about__top {
+  max-width: 1225px;
 }
