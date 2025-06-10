@@ -188,7 +188,7 @@
   justify-content: center;
   border-radius: 24px;
   /* background: linear-gradient(135deg, #a259ff 0%, #ff2e63 100%); */
-  box-shadow: 0 4px 32px 0 rgba(162, 89, 255, 0.18);
+  box-shadow: 0 4px 32px 0 rgba(161, 89, 255, 0.083);
   margin-left: 16px;
   transition: transform 0.15s;
   text-decoration: none;
