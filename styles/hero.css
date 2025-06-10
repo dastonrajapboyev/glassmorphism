@@ -146,8 +146,11 @@
 
   .hero__box {
     /* padding: 20px 12px; */
-    /* border-radius: 20px; */
+    border-radius: 20px;
     width: 95%;
+  }
+  .hero__box::before {
+    border-radius: 20px;
   }
 }
 
