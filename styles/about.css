@@ -281,6 +281,10 @@
     font-weight: 600;
     opacity: 1;
   }
+  .about__title {
+    font-size: 42px;
+    line-height: 1.2;
+  }
   .about__stat-icons {
     display: flex;
     flex-wrap: wrap;
