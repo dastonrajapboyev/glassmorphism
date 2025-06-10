@@ -1,0 +1,216 @@
+.contact-services {
+  /* padding: 80px 20px; */
+  text-align: center;
+  /* margin-top: 100px; */
+  border-top: 1px solid gray;
+  margin-top: 448px;
+}
+
+.contact-services__title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 134.5%;
+  letter-spacing: 4%;
+  color: #fff;
+  margin-top: 55px;
+}
+
+.contact-services__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 134.5%;
+  letter-spacing: 4%;
+  margin-top: 7px;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+.contact-services__blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  row-gap: 100px;
+  max-width: 1200px;
+  margin: 70px auto 124px auto;
+}
+
+.contact-services__block {
+  background: rgba(24, 24, 40, 0.5); /* Asosiy fonni shaffofroq qilish */
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+}
+
+.contact-services__block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px; /* border qalinligi */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 169, 169, 0.25) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.contact-services__block-content {
+  position: relative; /* Matn fon rasmlari ustida bo'lishi uchun */
+  z-index: 1;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.contact-services__block-content span {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Fon rasmlari */
+.contact-service-block-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/about-section_images/bg-01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10% center;
+}
+
+.contact-service-block-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/about-section_images/bg-02.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80% center;
+}
+
+.contact-service-block-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/about-section_images/bg-03.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% center;
+}
+
+.contact-service-block-4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/about-section_images/bg-04.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80% center;
+}
+
+/* Matn ranglari */
+.contact-service-block-1 .contact-services__block-content span {
+  color: #e3dc28;
+}
+
+.contact-service-block-2 .contact-services__block-content span {
+  color: #6a26c0;
+}
+
+.contact-service-block-3 .contact-services__block-content span {
+  color: rgb(160, 32, 71);
+}
+
+.contact-service-block-4 .contact-services__block-content span {
+  color: rgb(221, 44, 172);
+}
+
+/* Responsive stillar */
+@media (max-width: 1200px) {
+  .contact-services__blocks {
+    gap: 24px;
+  }
+  .contact-services__block-content span {
+    font-size: 40px;
+  }
+  .contact-services__block-content {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-services {
+    margin-top: 80px;
+    padding: 60px 15px;
+  }
+  .contact-services__title {
+    font-size: 40px;
+  }
+  .contact-services__subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .contact-services__blocks {
+    grid-template-columns: 1fr; /* Mobil uchun bittadan */
+    gap: 20px; /* Mobil bo'shliq */
+    max-width: 500px; /* Mobil maksimal kengligi */
+  }
+  .contact-services__block-content span {
+    font-size: 36px;
+  }
+  .contact-services__block-content {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-services {
+    margin-top: 60px;
+    padding: 40px 10px;
+  }
+  .contact-services__title {
+    font-size: 32px;
+  }
+  .contact-services__subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .contact-services__block {
+    padding: 30px;
+  }
+  .contact-services__block-content span {
+    font-size: 30px;
+  }
+  .contact-services__block-content {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-services {
+    margin-top: 40px;
+    padding: 30px 5px;
+  }
+  .contact-services__title {
+    font-size: 28px;
+  }
+  .contact-services__block {
+    padding: 25px;
+  }
+  .contact-services__block-content span {
+    font-size: 26px;
+  }
+  .contact-services__block-content {
+    font-size: 18px;
+  }
+}

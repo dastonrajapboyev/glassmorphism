@@ -15,11 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (headerContent) {
           targetElement.appendChild(headerContent);
           highlightActiveLink(targetElement);
+          if (window.initBurgerMenu) {
+            window.initBurgerMenu();
+          }
         }
       } else if (targetId === "footer-placeholder") {
         const footerContent = doc.querySelector("footer.footer");
         if (footerContent) {
           targetElement.appendChild(footerContent);
+          if (document.body.classList.contains("about-page-body")) {
+            footerContent.classList.add("about-page-footer");
+          }
         }
       }
     } catch (error) {

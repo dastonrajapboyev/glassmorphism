@@ -401,9 +401,106 @@
 }
 .about-page .about__top {
   max-width: 1435px;
+  border-radius: 50px;
+}
+.about-page .about__top::before {
+  max-width: 1435px;
+  border-radius: 50px;
+}
+
+.services-page .about__top.service__top {
+  padding: 0;
+}
+
+/* Responsive adjustments for .about-page .about__top and its children */
+@media (max-width: 1400px) {
+  .about-page .about__top {
+    padding: 30px 30px 60px 30px;
+    margin-bottom: 40px;
+  }
+  .about-page .about__title {
+    font-size: 60px;
+  }
+  .about-page .about__desc {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-page .about__top {
+    padding: 25px 25px 50px 25px;
+    margin-bottom: 35px;
+  }
+  .about-page .about__title {
+    font-size: 55px;
+  }
+  .about-page .about__desc {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-page .about__top {
+    padding: 20px 20px 40px 20px;
+    margin-bottom: 30px;
+  }
+  .about-page .about__title {
+    font-size: 45px;
+  }
+  .about-page .about__desc {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-page .about__top {
+    padding: 18px 15px 30px 15px;
+    margin-bottom: 25px;
+  }
+  .about-page .about__title {
+    font-size: 38px;
+  }
+  .about-page .about__desc {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-page {
+    height: auto;
+  }
+  .about-page .about__top {
+    padding: 15px 10px 25px 10px;
+    margin-bottom: 20px;
+  }
+  .about-page .about__title {
+    font-size: 32px;
+  }
+  .about-page .about__desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-page .about__top {
+    padding: 10px 10px 20px 10px;
+    margin-bottom: 15px;
+  }
+  .about-page .about__title {
+    font-size: 28px;
+  }
+  .about-page .about__desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
 /* Keep original width for index page */
 .about:not(.about-page) .about__top {
   max-width: 1225px;
 }
+/* .about:not(.about-page) .about__top {
+  padding: 42px 40px 82px 40px;
+} */

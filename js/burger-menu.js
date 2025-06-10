@@ -1,13 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Function to initialize burger menu
+function initBurgerMenu() {
   const burger = document.querySelector(".header__burger");
   const nav = document.querySelector(".header__nav");
   const body = document.body;
   const navLinks = document.querySelectorAll(".header__nav-link");
 
+  if (!burger || !nav) return; // Exit if elements don't exist yet
+
   // Set active link based on current page
-  const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
   navLinks.forEach((link) => {
-    if (link.getAttribute("href") === currentPath) {
+    const linkHref = link.getAttribute("href");
+    if (
+      linkHref === currentPath ||
+      (currentPath === "" && linkHref === "index.html")
+    ) {
       link.classList.add("active");
     }
   });
@@ -45,4 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
       body.style.overflow = "";
     }
   });
+}
+
+// Initialize on DOMContentLoaded for index.html
+document.addEventListener("DOMContentLoaded", () => {
+  // If header is already in the DOM (index.html), initialize immediately
+  if (document.querySelector(".header__burger")) {
+    initBurgerMenu();
+  }
 });
+
+// Export the function to be called from load_components.js
+window.initBurgerMenu = initBurgerMenu;
