@@ -1,31 +1,49 @@
 /* footer.css */
 .footer {
   width: 100%;
-  background: #181828;
+  background: linear-gradient(180deg, #181828 0%, #13132b 100%);
   color: #fff;
   padding: 57px 0 24px 0;
   font-family: "Montserrat", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 /* About page footer specific styles */
 .footer.about-page-footer {
-  background: #160532;
+  background: linear-gradient(180deg, #160532 0%, #0f0229 100%);
 }
 
 .footer__container {
   max-width: 1211px;
   margin: 0 auto;
   display: flex;
-  /* justify-content: space-between; */
   gap: 88px;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .footer__left {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .footer__logo-row {
@@ -33,13 +51,27 @@
   align-items: center;
   gap: 18px;
   margin-left: -10px;
+  transition: transform 0.3s ease;
+}
+
+.footer__logo-row:hover {
+  transform: translateY(-2px);
 }
 
 .footer__logo {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: #222;
+  background: linear-gradient(145deg, #1a1a2e, #181828);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer__logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
 .footer__brand {
@@ -55,17 +87,24 @@
   color: #ff2e63;
   font-weight: 800;
   font-size: 1.1em;
+  text-shadow: 0 2px 4px rgba(255, 46, 99, 0.2);
 }
 
 .footer__brand-sub {
   color: #fff;
   font-weight: 700;
   font-size: 1em;
+  opacity: 0.9;
 }
 
 .footer__copyright {
   font-size: 0.95rem;
   opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer__copyright:hover {
+  opacity: 0.9;
 }
 
 .footer__links {
@@ -88,10 +127,29 @@
   font-size: 26px;
   font-weight: 500;
   line-height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.footer__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff2e63;
+  transition: width 0.3s ease;
 }
 
 .footer__link:hover {
-  color: #a259ff;
+  color: #ff4d7a;
+  transform: translateY(-1px);
+}
+
+.footer__link:hover::after {
+  width: 100%;
 }
 
 .footer__right {
@@ -103,20 +161,33 @@
 }
 
 .footer__links--bottom .footer__link {
-  text-decoration: underline;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer__links--bottom .footer__link:hover {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
   .footer__container {
-    gap: 24px;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  .footer__links {
+    gap: 60px;
   }
 }
+
 @media (max-width: 900px) {
+  .footer {
+    padding: 40px 0 20px 0;
+  }
   .footer__container {
     flex-direction: column;
     align-items: center;
-    padding: 0 8px;
-    gap: 24px;
+    gap: 30px;
   }
   .footer__right,
   .footer__left {
@@ -124,37 +195,76 @@
     width: 100%;
   }
   .footer__links {
-    gap: 24px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 0.98rem;
   }
   .footer__logo-row {
     justify-content: center;
+    margin-left: 0;
+  }
+  .footer__link {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 600px) {
   .footer {
-    padding: 24px 0 40px 0;
+    padding: 30px 0 20px 0;
   }
   .footer__container {
-    padding: 0 2vw;
-    gap: 12px;
+    gap: 20px;
+    padding: 0 15px;
   }
-
   .footer__logo {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 60px;
   }
   .footer__brand {
-    font-size: 1rem;
+    font-size: 20px;
   }
   .footer__links {
-    gap: 12px;
-    font-size: 0.92rem;
+    gap: 20px;
+  }
+  .footer__link {
+    font-size: 16px;
   }
   .footer__copyright {
     font-size: 0.85rem;
+    text-align: center;
+  }
+  .footer__links--bottom {
+    gap: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    padding: 25px 0 15px 0;
+  }
+  .footer__container {
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .footer__logo {
+    width: 50px;
+    height: 50px;
+  }
+  .footer__brand {
+    font-size: 18px;
+  }
+  .footer__links {
+    gap: 15px;
+  }
+  .footer__link {
+    font-size: 14px;
+  }
+  .footer__copyright {
+    font-size: 0.8rem;
+  }
+  .footer__links--bottom {
+    gap: 12px;
+    font-size: 12px;
   }
 }

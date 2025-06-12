@@ -204,6 +204,9 @@
     width: 98vw;
     min-width: 0;
   }
+  .about__top {
+    margin-right: 0;
+  }
   .about__stat-icons {
     gap: 16px;
     /* margin-left: 0; */
