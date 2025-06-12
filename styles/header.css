@@ -18,8 +18,7 @@ li {
   align-items: center;
   gap: 38px;
 }
-.header__container {
-}
+
 .header__logo {
   width: 76.89px;
   height: 76.89px;
@@ -123,6 +122,12 @@ li {
   transition: all 0.3s ease;
 }
 
+@media (min-width: 769px) and (max-width: 900px) {
+  .header__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media (max-width: 768px) {
   .desktop-only {
     display: none;

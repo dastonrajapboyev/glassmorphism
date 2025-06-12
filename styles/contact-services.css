@@ -3,7 +3,7 @@
   text-align: center;
   /* margin-top: 100px; */
   border-top: 1px solid gray;
-  margin-top: 448px;
+  margin-top: 494px;
 }
 
 .contact-services__title {
@@ -28,7 +28,7 @@
 .contact-services__blocks {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+
   row-gap: 100px;
   max-width: 1200px;
   margin: 70px auto 124px auto;
@@ -74,7 +74,8 @@
   z-index: 1;
   font-size: 32px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 74%;
+  letter-spacing: 1px;
   color: #fff;
 }
 
@@ -100,6 +101,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80% center;
+  margin-right: 143px;
 }
 
 .contact-service-block-3 {
@@ -116,6 +118,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80% center;
+  margin-right: 143px;
 }
 
 /* Matn ranglari */
@@ -161,22 +164,58 @@
     margin-bottom: 40px;
   }
   .contact-services__blocks {
-    grid-template-columns: 1fr; /* Mobil uchun bittadan */
-    gap: 20px; /* Mobil bo'shliq */
-    max-width: 500px; /* Mobil maksimal kengligi */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto 80px auto;
+  }
+  .contact-services__block {
+    padding: 30px;
+    height: 200px;
+    min-height: 180px;
   }
   .contact-services__block-content span {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 6px;
   }
   .contact-services__block-content {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .contact-service-block-2,
+  .contact-service-block-4 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-services {
+    margin-top: 60px;
+    padding: 40px 10px;
+  }
+  .contact-services__blocks {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 15px;
+    margin: 30px auto 60px auto;
+  }
+  .contact-services__block {
+    padding: 25px;
+    height: 180px;
+    min-height: 160px;
+  }
+  .contact-services__block-content span {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  .contact-services__block-content {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 600px) {
   .contact-services {
-    margin-top: 60px;
-    padding: 40px 10px;
+    margin-top: 50px;
+    padding: 35px 8px;
   }
   .contact-services__title {
     font-size: 32px;
@@ -185,14 +224,22 @@
     font-size: 14px;
     margin-bottom: 30px;
   }
+  .contact-services__blocks {
+    max-width: 350px;
+    gap: 12px;
+    margin: 25px auto 50px auto;
+  }
   .contact-services__block {
-    padding: 30px;
+    padding: 20px;
+    height: 160px;
+    min-height: 140px;
   }
   .contact-services__block-content span {
-    font-size: 30px;
+    font-size: 26px;
+    margin-bottom: 4px;
   }
   .contact-services__block-content {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

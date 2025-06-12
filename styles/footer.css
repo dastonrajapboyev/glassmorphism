@@ -3,7 +3,7 @@
   width: 100%;
   background: linear-gradient(180deg, #181828 0%, #13132b 100%);
   color: #fff;
-  padding: 57px 0 24px 0;
+  padding: 57px 0 46px 0;
   font-family: "Montserrat", Arial, sans-serif;
   position: relative;
   overflow: hidden;
@@ -114,7 +114,6 @@
 
 .footer__links--bottom {
   gap: 18px;
-  margin-top: 8px;
   font-family: Poppins;
   font-size: 19px;
   font-weight: 500;
@@ -158,12 +157,15 @@
   align-items: flex-end;
   justify-content: flex-start;
   gap: 18px;
+  margin-top: 60px;
 }
 
 .footer__links--bottom .footer__link {
-  font-size: 16px;
+  font-size: 20px;
   text-decoration: none;
   opacity: 0.8;
+  margin-top: -4px;
+  letter-spacing: 2px;
 }
 
 .footer__links--bottom .footer__link:hover {

@@ -405,12 +405,32 @@
 }
 
 /* About page specific styles */
+.about-page-body .about {
+  margin-top: 203px;
+}
 .about-page {
   padding: 0 20px;
 }
 .about-page .about__top {
   max-width: 1435px;
   border-radius: 50px;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+.about-page .about__title {
+  font-size: 68.32px;
+  font-weight: 700;
+  line-height: 169%;
+  letter-spacing: 1px;
+  margin-right: 75px;
+}
+.about-page .about__desc {
+  font-family: montserrat;
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0px;
+  margin-top: 32px;
 }
 .about-page .about__top::before {
   max-width: 1435px;
@@ -442,6 +462,7 @@
   }
   .about-page .about__title {
     font-size: 55px;
+    margin-right: 0;
   }
   .about-page .about__desc {
     font-size: 26px;
